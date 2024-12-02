@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_background_sample"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainScr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/rootLayoutForViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--************* Feed  Heading ***********-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_height="fill_parent"
+                    android:layout_width="fill_parent">
+
+                <ImageView
+                    android:id="@+id/ivBannerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+
+                </ScrollView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="15dp">
+
+                    <!--<ImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:src="@drawable/top_inlogo" />-->
+
+
+                    <TextView
+                        android:id="@+id/mealPlanText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="@font/other"
+                        android:text="@string/upcomings_challenges_and_campaigns"
+                        android:textColor="@color/white"
+                        android:textSize="25sp" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--************* Feed  Heading ***********-->
+
+            <!--************* Meal  Category ***********-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingBottom="20dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="@dimen/layout_padding"
+                    android:layout_marginRight="@dimen/layout_padding"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/radiogroup_out_line"
+                    android:checkedButton="@+id/radioButtonChallenge"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonChallenge"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:gravity="center"
+                        android:text="@string/challenges"
+                        android:textColor="@drawable/button_text_color" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonCampaign"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/toggle_widget_background"
+                        android:button="@null"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:gravity="center"
+                        android:text="@string/campaigns"
+                        android:textColor="@drawable/button_text_color" />
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+            <!--************* Meal  Category ***********-->
+
+            <!--************* Meal  Listing ***********-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvForUpcomingClngAndCmpn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp" />
+            <!--************* Meal  Listing ***********-->
+
+            <TextView
+                android:id="@+id/tvHeadingNotFound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ghhh"
+                android:visibility="gone"
+                android:textSize="20dp"
+                android:layout_below="@+id/rvForUpcomingClngAndCmpn"
+                android:textColor="@color/black"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

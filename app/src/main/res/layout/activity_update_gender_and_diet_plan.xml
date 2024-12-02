@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.studio.amplify.activity.UpdateGenderAndDietPlanActivity">
+
+    <include
+        android:id="@id/headerLayout"
+        layout="@layout/header_layout" />
+
+    <RelativeLayout
+        android:id="@+id/rlGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlMale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="@string/identify_as_male"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMaleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlMale"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlFemale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewMaleDivider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="@string/identify_as_female"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewFemaleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlFemale"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlUnspecified"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewFemaleDivider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvUnspecified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="@string/unspecified"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgUnspecified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewunspecifiedDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlUnspecified"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlOther"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewunspecifiedDivider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="@string/edit_other"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewotherDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlOther"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlPrefer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewotherDivider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvPrefer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="@string/prefer"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgPrefer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewpreferDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlPrefer"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlDiet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlGender"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlMainstream"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvMainstream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="@string/mainstream"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgMainstream"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewMainstreamDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlMainstream"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlVegetarian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewMainstreamDivider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvVegetarian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="@string/vegetarian"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgVegetarian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewVegetarianDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlVegetarian"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlKg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="kg"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewKgDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlKg"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlLb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewKgDivider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvLb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="lb"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgLb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewlbDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlLb"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlForAgeRange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginTop="@dimen/layout_padding"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlAgeUnder25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvAgeUnder25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="Under 25"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgAgeUnder25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewAgeUnder25Divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rlAgeUnder25"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlAge25To34"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewAgeUnder25Divider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvAge25To34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="25 - 34"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgAge25To34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewAge25To34Divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlAge25To34"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlAge35To44"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewAge25To34Divider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvAge35To44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="35 - 44"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgAge35To44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewAge35To44Divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlAge35To44"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+        <RelativeLayout
+            android:id="@+id/rlAge45To54"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewAge35To44Divider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvAge45To54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="45 - 54"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgAge45To54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewAge45To54Divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlAge45To54"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+
+        <RelativeLayout
+            android:id="@+id/rlAge55To64"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewAge45To54Divider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvAge55To64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="55 - 64"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgAge55To64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewAge55To64Divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlAge55To64"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlAge65Plus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewAge55To64Divider"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tvAge65Plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/layout_padding"
+                android:text="65 Plus"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="@dimen/common_text_size" />
+
+            <ImageView
+                android:id="@+id/imgAge65Plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/layout_padding"
+                android:src="@drawable/b_uncheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewAge65PlusDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlAge35To44"
+            android:layout_marginTop="15dp"
+            android:background="@color/forgot_password_background" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

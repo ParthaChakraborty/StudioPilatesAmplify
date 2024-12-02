@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_background_sample"
+    android:orientation="vertical">
+
+    <!--<android.support.v4.widget.NestedScrollView
+          android:id="@+id/mainScr"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:isScrollContainer="true"
+          android:scrollbars="none">-->
+
+    <LinearLayout
+        android:id="@+id/rootLayoutForViews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--************* Feed  Heading ***********-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/ivBannerImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <!--<ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/top_inlogo" />-->
+
+                    <ImageView
+                        android:id="@+id/imgBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/title_ico_back" />
+
+
+                    <TextView
+                        android:id="@+id/shoppingListText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:maxLines="1"
+                        android:layout_below="@+id/imgBack"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:text="Shopping List"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/shoppingListTextBlankValue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/shoppingListText"
+                        android:maxLines="1"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/other"
+                        android:text="@string/meal_plan"
+                        android:textColor="@color/white"
+                        android:textSize="45sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--************* Feed  Heading ***********-->
+
+        <!--************* MaintenanceWeek  Category ***********-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/toggleShop"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="@dimen/layout_padding"
+                android:layout_marginRight="@dimen/layout_padding"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/radiogroup_out_line"
+                android:checkedButton="@+id/radioButtonShpoppingMainStream"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonShpoppingMainStream"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/mainstream"
+                    android:textColor="@drawable/button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonShoppingVegetarian"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/toggle_widget_background"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/vegetarian"
+                    android:textColor="@drawable/button_text_color" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlNavigator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_padding"
+                    android:paddingBottom="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivForPreviousWeek"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/left_arrow" />
+
+                    <TextView
+                        android:id="@+id/tvForMaintenanceWeek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+                    <ImageView
+                        android:id="@+id/ivForNextWeek"
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+                <!--</RelativeLayout>-->
+                <!--************* MaintenanceWeek  Category ***********-->
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/rlNavigator" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--</android.support.v4.widget.NestedScrollView>-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

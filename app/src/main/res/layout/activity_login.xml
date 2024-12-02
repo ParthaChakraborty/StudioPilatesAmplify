@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/lnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <!--<ImageView
+                android:id="@+id/imgLoginArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_back_ios_black_24dp"
+                android:layout_marginLeft="10dp"/>-->
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/aileron_bold_webfont"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="@string/welcome"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/login_top_logo" />-->
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                android:layout_marginTop="35dp"
+                app:hintTextColor="@color/black"
+                style="@style/InputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLoginEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/aileron_regular_webfont"
+                    android:hint="Email"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:tag="Please enter email."
+                    android:textCursorDrawable="@null"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/gray"
+                app:passwordToggleDrawable="@drawable/show_password"
+                app:passwordToggleEnabled="true"
+                android:layout_marginTop="20dp"
+                app:hintTextColor="@color/black"
+                style="@style/InputLayoutStyle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLoginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/aileron_regular_webfont"
+                    android:hint="Password"
+                    android:layout_gravity="center_vertical"
+                    android:inputType="textPassword"
+                    android:imeOptions="actionDone"
+                    android:tag="Please enter password."
+                    android:textCursorDrawable="@null"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--<TextView
+                android:id="@+id/tvUniquePass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/aileron_bold_webfont"
+                android:gravity="center"
+                android:text="@string/unique_password"
+                android:textColor="@color/black"
+                android:textSize="18sp" />-->
+
+            <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/gray"/>
+
+            <TextView
+                android:id="@+id/tvRegistration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/register"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tvForgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:padding="10dp"
+                android:text="@string/forget_password"
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="80dp"
+                android:layout_marginEnd="80dp"
+                android:background="@color/black" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

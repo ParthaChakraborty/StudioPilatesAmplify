@@ -1,0 +1,134 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardViews">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_chlng__cam_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tv_chlng_cam_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:padding="10dp"
+            android:gravity="center"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/layout_padding"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/aileron_regular_webfont"/>
+
+        <TextView
+            android:id="@+id/tvFromDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/aileron_regular_webfont"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tv_chlng_cam_title"/>
+
+        <TextView
+            android:id="@+id/tvToDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvFromDate"
+            android:fontFamily="@font/aileron_regular_webfont"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/btn_Chlng_cmpn_join"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_chlng_cam_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:fontFamily="@font/aileron_bold_webfont"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btn_Chlng_cmpn_participate"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_chlng_cam_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:fontFamily="@font/aileron_bold_webfont"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btn_data_update"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_chlng_cam_title"
+            android:layout_toStartOf="@id/btn_Chlng_cmpn_join"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textSize="12sp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:fontFamily="@font/aileron_bold_webfont"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+
+
+        <!--<Button
+            android:id="@+id/btn_Chlng_cmpn_join"
+            android:background="@color/black"
+            android:layout_below="@+id/tv_chlng_cam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/aileron_bold_webfont"/>-->
+
+        <!--<Button
+            android:id="@+id/btn_data_update"
+            android:background="@color/black"
+            android:layout_below="@+id/tv_chlng_cam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:layout_toStartOf="@id/btn_Chlng_cmpn_join"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/aileron_bold_webfont"
+            android:visibility="gone"/>-->
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

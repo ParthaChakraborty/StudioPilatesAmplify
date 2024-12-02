@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootForTrackingItemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ForgotPasswordTheme"
+    android:background="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/imageViewItemIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/imageViewItemIcon"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="@font/aileron_regular_webfont"/>
+
+    <TextView
+        android:id="@+id/tvItemPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvItemName"
+        android:layout_toEndOf="@id/imageViewItemIcon"
+        android:textColor="@color/black"
+        android:fontFamily="@font/aileron_regular_webfont"/>
+
+    <ImageView
+        android:id="@+id/checkImageForTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:padding="5dp"
+        android:src="@drawable/b_uncheck" />
+
+    <LinearLayout
+        android:id="@+id/llForSpinner"
+        android:layout_marginStart="@dimen/layout_padding"
+        android:layout_width="100dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spinnerForWater"
+            android:layout_width="100dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/imageViewItemIcon"
+        android:layout_marginEnd="@dimen/layout_padding"
+        android:layout_marginStart="@dimen/layout_padding"
+        android:background="@color/forgot_password_background" />
+
+
+
+</RelativeLayout>

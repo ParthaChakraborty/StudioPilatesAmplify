@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Country"
+        android:padding="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvTitle"
+        android:background="@color/forgot_password_background"
+        android:fontFamily="@font/aileron_regular_webfont"/>
+
+</RelativeLayout>

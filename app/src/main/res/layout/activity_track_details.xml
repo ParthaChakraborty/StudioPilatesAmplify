@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.TrackDetailsActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+
+            <ImageView
+                android:id="@+id/imgBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_arrow_back_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"/>
+
+          <!--<com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+                android:id="@+id/horizontalPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgBackArrow"/>-->
+
+            <com.vivekkaushik.datepicker.DatePickerTimeline
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FAFAFA"
+                app:selectedDateBackground="@color/black"
+                app:selectorColor="#bababa"
+                app:textColorNormal="@color/black"
+                app:textColorSelected="@color/white"
+                android:layout_below="@+id/imgBackArrow"/>
+
+            <!--<com.harrywhewell.scrolldatepicker.DayScrollDatePicker
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/imgBackArrow"
+                android:background="@color/background_transparent"
+
+                app:selectedDateBackground="@color/black"
+                app:selectorColor="#bababa" />-->
+
+            <TextView
+                android:id="@+id/tvDid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Did You?"
+                android:textSize="25sp"
+                android:layout_below="@+id/calendarView"
+                android:textColor="@color/black"
+                android:fontFamily="@font/aileron_bold_webfont"
+                android:layout_marginTop="35dp"/>
+
+            <TextView
+                android:id="@+id/tvTrackTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/aileron_bold_webfont"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/tvDid"/>
+
+            <ImageView
+                android:id="@+id/imgWorkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/disable_gry"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/tvDid"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/tvTrackTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/aileron_bold_webfont"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/tvTrackTitle1"/>
+
+            <ImageView
+                android:id="@+id/imgCardio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/disable_blk"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/imgWorkout"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/tvTrackTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/aileron_bold_webfont"
+                android:layout_marginTop="34dp"
+                android:layout_below="@id/tvTrackTitle2"/>
+
+            <ImageView
+                android:id="@+id/imgReformer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/disable_wht"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/imgCardio"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/tvTrackTitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/aileron_bold_webfont"
+                android:layout_marginTop="34dp"
+                android:layout_below="@id/tvTrackTitle3"/>
+
+            <ImageView
+                android:id="@+id/imgGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/disable_grn"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="32dp"
+                android:layout_below="@id/imgReformer"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/btn_updte"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/rlMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="50dp"
+        android:background="@color/black"
+        android:fontFamily="@font/aileron_bold_webfont"
+        android:gravity="center"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/update_goals"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/rlClass"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/btn_updte"
+        android:layout_margin="10dp"
+        android:background="@color/background_transparent">
+
+
+        <TextView
+            android:id="@+id/tvTrackTitle5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/aileron_bold_webfont"
+            android:padding="10dp"
+            android:text="Did you complete today's class?"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Switch
+            android:id = "@+id/mySwitchId"
+            android:layout_width = "100dp"
+            android:layout_height = "wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:checked = "false"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

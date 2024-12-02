@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="colorRegistrationPopup">#bfbfbf</color>
+    <color name="verified_color">#008800</color>
+    <color name="not_verified_color">#FF0000</color>
+    <color name="editProfileValueColor">#919191</color>
+    <color name="feed_background_sample">#E8E8E8</color>
+
+    <color name="background_transparent">#77797D</color>
+
+
+    <color name="forgot_password_background">#ededed</color>
+    <color name="transparent">#00000000</color>
+    <color name="gray">#808080</color>
+    <color name="silver">#C0C0C0</color>
+    <color name="light_silver">#d8d8d8</color>
+
+    <color name="physician_name">#0E7495</color>
+</resources>

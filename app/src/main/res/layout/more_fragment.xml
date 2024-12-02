@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_background_sample">
+
+    <include
+        android:id="@id/headerLayout"
+        layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:isScrollContainer="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rlForView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_padding">
+
+            <!-- ***** about - section *****-->
+
+            <TextView
+                android:id="@+id/tvHeadingAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/edit_profile_view_padding"
+                android:text="@string/about"
+                android:fontFamily="@font/aileron_regular_webfont"
+                android:textSize="16sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlForViewsUnderAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHeadingAbout"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:fontFamily="@font/aileron_bold_webfont">
+
+                <View
+                    android:id="@+id/viewForAboutSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlChallengeIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvChallengeIntroduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:text="@string/introduction"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <ImageView
+                        android:id="@+id/imgChallengeIntroduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow"
+                        android:fontFamily="@font/aileron_bold_webfont"/>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAfterChallengeIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlChallengeIntroduction"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlFAQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewAfterChallengeIntroduction">
+
+                    <TextView
+                        android:id="@+id/tvFAQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/faq"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+                    <ImageView
+                        android:id="@+id/imgFAQArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow"
+                        android:fontFamily="@font/aileron_bold_webfont"/>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/endViewForAboutSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlFAQ"
+                    android:background="@color/colorRegistrationPopup" />
+
+            </RelativeLayout>
+            <!-- ***** about - section *****-->
+
+            <!-- ***** account - section *****-->
+
+            <TextView
+                android:id="@+id/tvHeadingAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlForViewsUnderAbout"
+                android:layout_marginStart="@dimen/edit_profile_view_padding"
+                android:layout_marginTop="10dp"
+                android:text="@string/account"
+                android:textSize="16sp"
+                android:fontFamily="@font/aileron_regular_webfont"/>
+
+            <RelativeLayout
+                android:id="@+id/rlForViewsUnderAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHeadingAccount"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/viewForAccountSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvEditProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/edit_profile"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:paddingStart="0dp"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgEditProfileArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAfterEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlEditProfile"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlActiveClngAndCmpn"
+                    android:layout_below="@+id/viewAfterEditProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvActiveClngAndCmpn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/actives_challenges_and_campaigns"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:paddingStart="0dp"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgActiveClngAndCmpnArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/viewAfterActiveClngAndCmpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlActiveClngAndCmpn"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlUpcomingClngAndCmpn"
+                    android:layout_below="@+id/rlActiveClngAndCmpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvUcomingClngAndCmpn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/upcomings_challenges_and_campaigns"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:paddingStart="0dp"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgUcomingClngAndCmpnArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAfterUcomingClngAndCmpn"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlUpcomingClngAndCmpn"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlMyMessaging"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewMyChallenges">
+
+                    <TextView
+                        android:id="@+id/tvMyMessaging"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/my_messaging"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgMyMessagingArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+
+
+                <View
+                    android:id="@+id/viewMyMessaging"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlMyMessaging"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlmyCampaigns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewAfterUcomingClngAndCmpn">
+
+                    <TextView
+                        android:id="@+id/tvmyCampaigns"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/my_campaigns"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/myCampaignsArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+                <View
+                    android:id="@+id/viewMyCampaigns"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlmyCampaigns"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlmyChallenges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewMyCampaigns">
+
+                    <TextView
+                        android:id="@+id/tvmyChallenges"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/my_challenges"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/myChallengesArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+                <View
+                    android:id="@+id/viewMyChallenges"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlmyChallenges"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rlPrivacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewMyMessaging">
+
+                    <TextView
+                        android:id="@+id/tvPrivacyPolicy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/policy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgPrivacyPolicyArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewPrivacyPolicy"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlPrivacyPolicy"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlTermsAndConditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlPrivacyPolicy">
+
+                    <TextView
+                        android:id="@+id/tvTermsAndConditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/condition"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgTermsAndConditionsArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAppVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlTermsAndConditions"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlAppVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewAppVersion">
+
+
+                    <TextView
+                        android:id="@+id/tvAppVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:text="@string/version"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+
+                    <TextView
+                        android:id="@+id/tvAppVersionValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:paddingEnd="20dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/endViewForAccountSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlAppVersion"
+                    android:background="@color/colorRegistrationPopup" />
+
+            </RelativeLayout>
+            <!-- ***** account - section *****-->
+
+            <!-- ***** rest - section *****-->
+
+            <RelativeLayout
+                android:id="@+id/rlForOtherViews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlForViewsUnderAccount"
+                android:layout_marginTop="30dp"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/viewForOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorRegistrationPopup" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/rlHomeWorkOuts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewForOther">
+
+                    <TextView
+                        android:id="@+id/tvHomeWorkouts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/workouts"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgHomeWorkoutArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewHomeWorkOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlHomeWorkOuts"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCardioPlans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewHomeWorkOut">
+
+                    <TextView
+                        android:id="@+id/tvCardioPlans"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/plans"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgCardioPlansArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewCardioPlans"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlCardioPlans"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlShoppingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewCardioPlans"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvShoppingList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/list"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgShoppingListArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewShoppingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlShoppingList"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlRecipeLibrary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlShoppingList"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvRecipeLibrary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/recipe_library"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgRecipeLibraryArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewRecipeLibrary"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlRecipeLibrary"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlScheduleClasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewCardioPlans">
+
+                    <TextView
+                        android:id="@+id/tvScheduleClasses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="Schedule Classes"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgScheduleClassesArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewScheduleClasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlScheduleClasses"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlBuyClasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlScheduleClasses">
+
+                    <TextView
+                        android:id="@+id/tvBuyClasses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/buy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgBuyClassesArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewBuyClasses"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlBuyClasses"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlForum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlBuyClasses">
+
+                    <TextView
+                        android:id="@+id/tvForum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/forum"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgForumArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+
+                <!--<RelativeLayout
+                    android:id="@+id/rlPreRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rlBuyClasses">
+
+                    <TextView
+                        android:id="@+id/tvPreRegister"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="Pre Register"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+
+                    <ImageView
+                        android:id="@+id/imgPreRegisterArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>-->
+
+               <!-- <View
+                    android:id="@+id/viewPreRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlBuyClasses"
+                    android:background="@color/forgot_password_background" />-->
+
+            </RelativeLayout>
+
+            <!-- ***** rest - section *****-->
+
+            <!-- ***** log out - section *****-->
+
+            <RelativeLayout
+                android:id="@+id/rlForLogoutSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlForOtherViews"
+                android:layout_marginBottom="@dimen/layout_padding"
+                android:layout_marginTop="30dp"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/viewLogOutFirst"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLogOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true">
+
+                    <TextView
+                        android:id="@+id/tvLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="@string/log_out"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <ImageView
+                        android:id="@+id/imgLogOutArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewLogOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlLogOut"
+                    android:background="@color/colorRegistrationPopup" />
+
+            </RelativeLayout>
+
+            <!-- ***** log out - section *****-->
+
+
+        </RelativeLayout> <!-- ***** second - layout *****-->
+
+    </ScrollView>
+
+</RelativeLayout>
+

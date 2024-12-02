@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_background_sample"
+    android:orientation="vertical"
+    android:theme="@style/ForgotPasswordTheme">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/rootNestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/rootLayoutForViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--************* Feed  Heading ***********-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/ivBannerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <!--<ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/top_inlogo" />-->
+
+                        <ImageView
+                            android:id="@+id/imgBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/title_ico_back" />
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/mealPlanText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:maxLines="1"
+                        android:fontFamily="@font/other"
+                        android:text="Recipe Library"
+                        android:textColor="@color/white"
+                        android:textSize="45sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+            <!--************* Feed  Heading ***********-->
+
+            <!--************* Search bar for recipe  ***********-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/aileron_regular_webfont"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbox"
+                    android:hint="Search Recipe"
+                    android:inputType="text"
+                    android:textSize="@dimen/common_text_size" />
+
+
+            </LinearLayout>
+            <!--************* Search bar for recipe ***********-->
+
+            <!--************* Category for recipe ***********-->
+
+
+            <RelativeLayout
+                android:id="@+id/rlForViewsForRecipeCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/viewForRecipeLibrary"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlBreakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvBreakfast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="Breakfast"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+
+                    <ImageView
+                        android:id="@+id/imgBreakfastArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAfterBreakfast"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlBreakfast"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewAfterBreakfast">
+
+                    <TextView
+                        android:id="@+id/tvLunch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="Lunch"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+
+                    <ImageView
+                        android:id="@+id/imgLunchArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAfterLunch"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlLunch"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlDinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewAfterLunch">
+
+                    <TextView
+                        android:id="@+id/tvDinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="Dinner"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+
+                    <ImageView
+                        android:id="@+id/imgDinnerArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAfterDinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlDinner"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlSnacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewAfterDinner">
+
+
+                    <TextView
+                        android:id="@+id/tvSnacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:text="Snacks"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+
+                    <ImageView
+                        android:id="@+id/imgSnacksArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewAfterSnacks"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlSnacks"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/colorRegistrationPopup" />
+
+                <RelativeLayout
+                    android:id="@+id/rlPopularCookingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewAfterSnacks"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:id="@+id/tvPopularCookingList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:text="Popular Cooking List"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+
+                    <ImageView
+                        android:id="@+id/imgPopularCookingListArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/endViewForRecipeLibrary"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlPopularCookingList"
+                    android:background="@color/colorRegistrationPopup" />
+
+            </RelativeLayout>
+
+            <!--************* Category for recipe ***********-->
+
+            <!--************* Recipe  Listing ***********-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvForRecipeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <!--************* Recipe  Listing ***********-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
+
+

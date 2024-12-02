@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@id/headerLayout"
+        layout="@layout/header_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:isScrollContainer="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rlForView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+<LinearLayout
+    android:background="@color/black"
+    android:gravity="center"
+    android:id="@+id/ll_image"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp" />
+
+    <Button
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/change_bt"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:text="EDIT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+            <!-- By using android:spacing we can give spacing between images
+                 android:animationDuration="3000" -> for animation running -->
+            <Gallery
+                android:visibility="gone"
+                android:id="@+id/imageGallery"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:animationDuration="2000"
+                android:padding="10dp"
+                android:spacing="5dp"
+                android:unselectedAlpha="50" />
+</LinearLayout>
+
+            <!-- ***** Layout for user information *****-->
+            <RelativeLayout
+                android:id="@+id/rlFirstLayout"
+                android:layout_below="@id/ll_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@color/white">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/user_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvUserNameValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_toEndOf="@+id/tvUserName"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="viewEnd" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewForRlUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForUserName"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rlForName"
+                    android:layout_below="@+id/rlForUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvNameValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_toEndOf="@+id/tvName"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="viewEnd" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewForRlName"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForName"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForRlName">
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/email"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvEmailValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:layout_toEndOf="@+id/tvEmail"
+                        android:paddingEnd="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textAlignment="viewEnd" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewForRlUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForUserEmail"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rlForMemberSince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForRlUserEmail">
+
+                    <TextView
+                        android:id="@+id/tvMember"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/member_since"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvMemberValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_toEndOf="@+id/tvMember"
+                        android:paddingEnd="15dp"
+                        android:textAlignment="viewEnd" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewForRlMemberSince"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForMemberSince"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+
+                <!--***** Relative layout for Password update ****** -->
+
+                <RelativeLayout
+                    android:id="@+id/rlForPasswordChange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForRlMemberSince">
+
+                    <TextView
+                        android:id="@+id/tvChangePassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/change_password"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvChangePasswordValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:layout_toEndOf="@+id/tvChangePassword"
+                        android:paddingEnd="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:text="@string/change_password_image"
+                        android:textAlignment="viewEnd"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+                <!--***** Relative layout for Password update ****** -->
+
+            </RelativeLayout>
+            <!-- ***** Layout for user information *****-->
+
+
+            <!--***** Relative layout for Gender and country update ****** -->
+            <RelativeLayout
+                android:id="@+id/rlSecondLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlFirstLayout"
+                android:layout_marginTop="40dp"
+                android:background="@color/white">
+
+                <!--*********** View For Gender  Update ************ -->
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/gender"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvGenderValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="25dp" />
+
+
+                    <ImageView
+                        android:id="@+id/imgGenderEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <!--*********** View For Gender  Update ************ -->
+
+                <View
+                    android:id="@+id/viewForRlGenderList"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForUserGender"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+
+                <!--*********** View For Country  ************ -->
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForRlGenderList">
+
+                    <TextView
+                        android:id="@+id/tvCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/country"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvCountryValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:paddingEnd="25dp" />
+
+                    <ImageView
+                        android:id="@+id/imgCountryEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+
+
+                </RelativeLayout>
+
+                <!--*********** View For Country  ************ -->
+
+                <View
+                    android:id="@+id/viewForRlForUserCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForUserCountry"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserTimeZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForRlForUserCountry">
+
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/time_zone"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvTimeValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="25dp"
+                        android:text=""/>
+
+
+                    <ImageView
+                        android:id="@+id/imgTimeEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewForRlForUserTimeZone"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForUserTimeZone"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserStudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForRlForUserTimeZone">
+
+                    <TextView
+                        android:id="@+id/tvStudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/studio"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvStudioValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:paddingEnd="25dp" />
+
+                    <ImageView
+                        android:id="@+id/imgStudioEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewForRlForUserStudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForUserStudio"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewForRlForUserStudio">
+
+                    <TextView
+                        android:id="@+id/tvGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/group"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvGroupValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:paddingEnd="25dp" />
+
+                    <ImageView
+                        android:id="@+id/imgGroupEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <!--***** Relative layout for Gender and country update ****** -->
+
+
+            <!--*********** View For Diet Change ************ -->
+
+            <RelativeLayout
+                android:id="@+id/rlDietLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlSecondLayout"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rlForUserDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvDiet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/diet_plan"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvDietValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:paddingEnd="25dp" />
+
+
+                    <ImageView
+                        android:id="@+id/imgDietEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/viewForUserDiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/rlForUserDiet"
+                    android:layout_marginEnd="@dimen/layout_padding"
+                    android:layout_marginStart="@dimen/layout_padding"
+                    android:background="@color/forgot_password_background" />
+
+
+                <RelativeLayout
+                    android:id="@+id/rlForUnit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/viewForUserDiet"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tvUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/unit"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvUnitValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="25dp" />
+
+
+                    <ImageView
+                        android:id="@+id/imgUnitEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/rlForUnit"
+                    android:id="@+id/rlForAgeRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvAgeRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/age_range"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvAgeRangeVal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="25dp" />
+
+
+                    <ImageView
+                        android:id="@+id/imgAgeRangeEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/rlForAgeRange"
+                    android:id="@+id/rlForUserChallenge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvChallenge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/edit_profile_view_padding"
+                        android:text="@string/chal_1"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/more_page_text_size" />
+
+                    <TextView
+                        android:id="@+id/tvChalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:layout_margin="15dp"
+                        android:paddingEnd="25dp" />
+
+
+                    <ImageView
+                        android:id="@+id/imgChalEditArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/right_arrow" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

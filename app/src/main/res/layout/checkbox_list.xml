@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<TextView
+        android:id="@+id/tvDid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Did You?"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/aileron_bold_webfont"
+        android:layout_marginTop="15dp"/>-->
+
+    <TextView
+        android:id="@+id/tvTrackTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lorem Ipsum"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/aileron_regular_webfont"
+        android:layout_marginTop="15dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>

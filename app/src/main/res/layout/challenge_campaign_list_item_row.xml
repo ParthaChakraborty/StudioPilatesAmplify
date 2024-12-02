@@ -1,0 +1,142 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="5dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardView">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_chlng_cmpgn_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/tvChlngCmpgn_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:padding="10dp"
+            android:gravity="center"
+            android:paddingEnd="0dp"
+            android:paddingStart="@dimen/layout_padding"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+        <TextView
+            android:id="@+id/tvChlngCmpgnFromDateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/aileron_regular_webfont"
+            android:textColor="@color/black"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/tvChlngCmpgn_title"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/tvChlngCmpgnToDateValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aileron_regular_webfont"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/tvChlngCmpgnFromDateValue"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!--<Button
+            android:id="@+id/btn_updte"
+            android:background="@color/black"
+            android:layout_below="@+id/tvChlngCmpgn_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            android:text="@string/view_history"
+            android:textColor="@color/white"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/aileron_bold_webfont"/>-->
+
+        <TextView
+            android:id="@+id/tvClassOpted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChlngCmpgn_title"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aileron_bold_webfont" />
+
+        <TextView
+            android:id="@+id/tvNoOfClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvChlngCmpgn_title"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/aileron_bold_webfont" />
+
+
+        <TextView
+            android:id="@+id/btn_classes"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tvChlngCmpgn_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:fontFamily="@font/aileron_bold_webfont"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/select_classes"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/btn_updte"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tvChlngCmpgn_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/black"
+            android:fontFamily="@font/aileron_bold_webfont"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="@string/view_history"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

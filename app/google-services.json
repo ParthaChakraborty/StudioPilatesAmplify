@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "85542483262",
+    "firebase_url": "https://amplify-93529.firebaseio.com",
+    "project_id": "amplify-93529",
+    "storage_bucket": "amplify-93529.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85542483262:android:0ae4fd199e82212d",
+        "android_client_info": {
+          "package_name": "com.studio.amplify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85542483262-f18k73p12gb1ilndur8vqkgdu4cl8nuv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBfXjbp4_9tofM6FaZFHslMqMiZ-vp_K8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

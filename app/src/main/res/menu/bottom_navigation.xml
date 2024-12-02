@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/actionFeed"
+        android:icon="@drawable/tab_ico_feed_b"
+        android:title="Feed" />
+
+    <item
+        android:id="@+id/actionTracking"
+        android:icon="@drawable/tab_ico_tra_g"
+        android:title="Tracking" />
+
+    <!--<item
+        android:id="@+id/actionMeals"
+        android:icon="@drawable/tab_ico_meal_g"
+        android:title="Meals" />-->
+
+    <item
+        android:id="@+id/actionNutrition"
+        android:icon="@drawable/tab_ico_meal_g"
+        android:title="Nutrition" />
+
+    <item
+        android:id="@+id/actionTips"
+        android:icon="@drawable/tab_ico_tips_g"
+        android:title="Tips" />
+
+    <item
+        android:id="@+id/actionMore"
+        android:icon="@drawable/tab_ico_more_g"
+        android:title="More" />
+
+</menu>

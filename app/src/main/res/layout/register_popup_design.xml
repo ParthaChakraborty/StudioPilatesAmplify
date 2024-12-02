@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/popupImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/black"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/top_inlogo" />
+    </RelativeLayout>
+
+    <!--<ImageView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/success_pop" />-->
+
+    <TextView
+        android:id="@+id/congratulationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popupImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:text="@string/registration_popup"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/aileron_regular_webfont"/>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/congratulationText"
+        android:layout_gravity="center"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="80dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/popupMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/congratulationText"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/registration_popup_message"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:fontFamily="@font/aileron_regular_webfont"/>
+
+    <Button
+        android:id="@+id/nextToLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popupMessage"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorRegistrationPopup"
+        android:text="@string/okay"
+        android:fontFamily="@font/aileron_bold_webfont"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+</RelativeLayout>

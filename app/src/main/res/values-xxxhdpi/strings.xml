@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chal_1">Challenge</string>
+    <string name="age_range">Age Range</string>
+    <string name="user_name">Username</string>
+    <string name="health_and_wellness_blogs">Health and Wellness Blogs</string>
+</resources>

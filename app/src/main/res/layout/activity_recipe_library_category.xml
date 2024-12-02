@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_background_sample"
+    android:orientation="vertical"
+    android:theme="@style/ForgotPasswordTheme">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header_layout" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/rootNestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/rootLayoutForViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--************* Search bar for recipe  ***********-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/aileron_regular_webfont"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittextbox"
+                    android:hint="Search Recipe"
+                    android:inputType="text"
+                    android:textSize="@dimen/common_text_size" />
+
+
+            </LinearLayout>
+            <!--************* Search bar for recipe ***********-->
+
+            <!--************* Recipe  Listing ***********-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvForCategoriesRecipeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scrollbars="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+            <!--************* Recipe  Listing ***********-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
+
+

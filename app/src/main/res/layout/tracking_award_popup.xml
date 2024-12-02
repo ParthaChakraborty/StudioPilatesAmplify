@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/popupImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cup" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/congratulationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/popupImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:padding="5dp"
+        android:fontFamily="@font/aileron_regular_webfont"
+        android:text="@string/registration_popup"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/congratulationText"
+        android:layout_gravity="center"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="80dp"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/popupMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/congratulationText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/award_popup"
+        android:textColor="@color/colorRegistrationPopup"
+        android:textSize="18sp"
+        android:fontFamily="@font/aileron_regular_webfont"/>
+
+    <Button
+        android:id="@+id/buttonToFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popupMessage"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+        android:text="@string/okay"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+</RelativeLayout>

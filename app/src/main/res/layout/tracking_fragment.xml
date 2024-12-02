@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lnTrackingFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feed_background_sample"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameRoot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mainScr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:isScrollContainer="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--************* tracking  Heading ***********-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <ScrollView
+                        android:id="@+id/ScrollView"
+                        android:layout_height="fill_parent"
+                        android:layout_width="fill_parent">
+
+                        <ImageView
+                            android:id="@+id/ivBannerImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scaleType="fitXY"
+                            android:adjustViewBounds="true" />
+
+
+                    </ScrollView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingEnd="20dp"
+                        android:paddingStart="20dp"
+                        android:paddingTop="15dp">
+
+                        <TextView
+                            android:id="@+id/goalTrackingText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="90dp"
+                            android:gravity="center_vertical"
+                            android:text="Goal Tracking"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/textViewRunningWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:fontFamily="@font/other"
+                            android:textColor="@color/white"
+                            android:textSize="45sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <!--************* tracking  Heading ***********-->
+                <!--  <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+                      android:id="@+id/horizontalPicker"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content" />-->
+                <!--************* Check the work  ***********-->
+
+                <LinearLayout
+                    android:id="@+id/rootLayoutForViews"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/calender"
+                        layout="@layout/layout_calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rlStopWatch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/imgClock"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="130dp"
+                            android:layout_marginTop="12dp"
+                            android:src="@drawable/timer_ico" />
+
+                        <TextView
+                            android:id="@+id/tvStopwatch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@+id/imgClock"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:text="Stopwatch"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textViewPointPlan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_weight="4.5"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/layout_padding"
+                        android:layout_marginStart="@dimen/layout_padding"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/black"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tvTotalPointsHeading"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="Total Points"
+                            android:fontFamily="@font/aileron_bold_webfont"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalPointTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvTotalPointsHeading"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginStart="8dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/tvTotalCalculation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="8dp"
+                            android:layout_toEndOf="@+id/tvTotalPointsHeading"
+                            android:gravity="end"
+                            android:fontFamily="@font/aileron_bold_webfont"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+                    </RelativeLayout>
+
+
+                    <!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">-->
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvForTrackingItems"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginEnd="@dimen/layout_padding"
+                        android:layout_marginStart="@dimen/layout_padding"
+                        android:layout_marginTop="12dp"
+                        android:scrollbars="vertical"
+                        android:visibility="gone"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    <!--<nl.dionsegijn.konfetti.KonfettiView
+                        android:id="@+id/viewKonfettiLib"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>-->
+                </LinearLayout>
+                <!--************* Check the work  ***********-->
+                <!--************* Share your mood  ***********-->
+                <!-- <include
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@id/headerLayout"
+                     layout="@layout/calendarView"
+                     android:layout_gravity="center"
+                     android:gravity="center"/>-->
+                <RelativeLayout
+                    android:id="@+id/feel_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/textViewShareYourMood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/aileron_regular_webfont"
+                        android:text="@string/tracking_mood_text"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/rootRlForEmojiFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewShareYourMood"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="20dp">
+
+                        <RelativeLayout
+                            android:id="@+id/rlSmileThrill"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivSmileThrill"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/smi_thril" />
+
+                            <TextView
+                                android:id="@+id/textViewSmileThrill"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivSmileThrill"
+                                android:layout_marginTop="15dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/thrilled_text"
+                                android:fontFamily="@font/aileron_regular_webfont"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/smiley_text_width" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlSmileContent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="20dp"
+                            android:layout_marginTop="8dp"
+                            android:paddingStart="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivSmileContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/smi_cont" />
+
+                            <TextView
+                                android:id="@+id/textViewSmileContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivSmileContent"
+                                android:layout_marginTop="15dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/content_text"
+                                android:fontFamily="@font/aileron_regular_webfont"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/smiley_text_width" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlSmileDiscouraged"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="12dp"
+                            android:layout_marginTop="8dp"
+                            android:paddingStart="12dp">
+
+                            <ImageView
+                                android:id="@+id/ivSmileDiscouraged"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/smi_disc" />
+
+                            <TextView
+                                android:id="@+id/textViewSmileDiscouraged"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivSmileDiscouraged"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/discouraged_text"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="@font/aileron_regular_webfont"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/smiley_text_width" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlSmileFrustrated"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:paddingEnd="15dp"
+                            android:layout_marginTop="8dp"
+                            android:paddingStart="15dp">
+
+
+                            <ImageView
+                                android:id="@+id/ivSmileFrustrated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:src="@drawable/smi_frust" />
+
+                            <TextView
+                                android:id="@+id/textViewSmileFrustrated"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ivSmileFrustrated"
+                                android:layout_marginTop="15dp"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/frustrated_text"
+                                android:fontFamily="@font/aileron_regular_webfont"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/smiley_text_width" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <!--********rootLayoutForGoalSetting********* -->
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rootLayoutForGoalSetting"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorRegistrationPopup"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/rootRlForEmojiFeedback">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llClickOfStartWeight"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="30"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/startbox" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/textViewValueOfStartWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="@font/aileron_regular_webfont"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textViewStartWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/aileron_regular_webfont"
+                                        android:hint="Start Weight"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llClickOfCurrentWeight"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_weight="30"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/currentlbox" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/textViewValueOfCurrentWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="@font/aileron_regular_webfont"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textViewCurrentWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/aileron_regular_webfont"
+                                        android:hint="Current Weight"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llClickOfGoalWeight"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="30"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/goalbox" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/textViewValueOfGoalWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="@font/aileron_regular_webfont"
+                                        android:textColor="@color/black"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/textViewGoalWeight"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/aileron_regular_webfont"
+                                        android:hint="Goal Weight"
+                                        android:textColor="@color/black"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/llClickOfStartBodyFat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_weight="30"
+                                android:background="@color/white"
+                                android:paddingBottom="20dp"
+                                android:paddingEnd="10dp"
+                                android:paddingStart="10dp"
+                                android:paddingTop="20dp">
+
+                                <TextView
+                                    android:id="@+id/textViewValueOfStartBodyFat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewStartBodyFat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/aileron_regular_webfont"
+                                    android:hint="Start Body Fat"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/llClickOfCurrentBodyFat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="30"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingBottom="20dp"
+                                android:paddingEnd="10dp"
+                                android:paddingStart="10dp"
+                                android:paddingTop="20dp">
+
+
+                                <TextView
+                                    android:id="@+id/textViewValueOfCurrentBodyFat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewCurrentBodyFat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/aileron_regular_webfont"
+                                    android:hint="Current Body Fat"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llClickOfGoalBodyFat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="30"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingBottom="20dp"
+                                android:paddingEnd="10dp"
+                                android:paddingStart="10dp"
+                                android:paddingTop="20dp">
+
+                                <TextView
+                                    android:id="@+id/textViewValueOfGoalBodyFat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewGoalBodyFat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/aileron_regular_webfont"
+                                    android:hint="Goal Body Fat"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--******rootLayoutForGoalSetting*****-->
+
+                    <TextView
+                        android:id="@+id/textViewWhatsOnYourMind"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rootLayoutForGoalSetting"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="@dimen/layout_padding"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/whats_on_your_mind"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/aileron_bold_webfont"/>
+
+                    <TextView
+                        android:id="@+id/tvViewList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/view_all"
+                        android:layout_below="@+id/rootLayoutForGoalSetting"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:fontFamily="@font/aileron_bold_webfont"
+                        android:textColor="@color/white"
+                        android:background="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/textViewFeedback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewWhatsOnYourMind"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="@dimen/layout_padding"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/aileron_regular_webfont"/>
+
+
+                    <View
+                        android:id="@+id/viewForAward"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:layout_below="@+id/textViewFeedback"
+                        android:background="@color/feed_background_sample" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlBadge_recoginition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/viewForAward"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/tvHead"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Badges and Recognition"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvBadgeHead"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvHead"
+                            android:layout_marginTop="40dp"
+                            android:layout_toEndOf="@+id/ivBadgeIcon"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:id="@+id/ivBadgeIcon"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_alignStart="@+id/tvHead"
+                            android:layout_below="@+id/tvHead"/>
+
+                        <ImageView
+                            android:id="@+id/ivForAward"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignStart="@+id/tvHead"
+                            android:layout_below="@+id/ivBadgeIcon"
+                            android:layout_marginBottom="@dimen/layout_padding" />
+
+                        <TextView
+                            android:id="@+id/textViewForAwardText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivBadgeIcon"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/ivForAward"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"/>
+
+                        <ImageView
+                            android:id="@+id/ivForAward2"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignStart="@+id/tvHead"
+                            android:layout_below="@+id/ivForAward"
+                            android:layout_marginBottom="@dimen/layout_padding" />
+
+                        <TextView
+                            android:id="@+id/textViewForAwardText2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ivForAward"
+                            android:layout_marginTop="20dp"
+                            android:layout_toEndOf="@+id/ivForAward2"
+                            android:fontFamily="@font/aileron_regular_webfont"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/smiley_text_width"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlForAward"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/viewForAward"
+                        android:gravity="center"
+                        android:visibility="gone">
+
+                      <!--  <ImageView
+                            android:id="@+id/ivForAward"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/layout_padding"
+                            android:src="@drawable/cup" />
+
+                        <TextView
+                            android:id="@+id/textViewForAwardText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/ivForAward"
+                            android:text="@string/award_popup"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/aileron_regular_webfont"/>-->
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+                <!--************* Share your mood  ***********-->
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/viewKonfettiLib"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>
+
+
